@@ -4,5 +4,5 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: Dockerfile
-  args: ['${{ inputs.path }}']
+  image: 'Dockerfile'
+  args: ['${{ inputs.path }}', 'text/markdown']
