@@ -2,7 +2,9 @@ name: 'upload-to-release'
 inputs:
   path:
     required: true
+  content-type:
+    default: application/zip
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: ['${{ inputs.path }}', 'text/markdown']
+  args: ['${{ inputs.path }}', '${{ inputs.content-type }}']
