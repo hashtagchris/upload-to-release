@@ -1,0 +1,7 @@
+name: 'upload-to-release'
+inputs:
+  path:
+    required: true
+runs:
+  using: 'docker'
+  args: ['${{ inputs.path }}']
