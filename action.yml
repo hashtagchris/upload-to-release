@@ -4,4 +4,5 @@ inputs:
     required: true
 runs:
   using: 'docker'
+  image: Dockerfile
   args: ['${{ inputs.path }}']
